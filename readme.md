@@ -24,16 +24,8 @@ Simplex Mono design guidelines:
 ### Logos:
 
 - Main Logo
-  - SVG: 
-
-    [https://nc.plainskill.net/f/7465](https://nc.plainskill.net/f/7465 (preview))
-  - PNG: 
-
-    [https://nc.plainskill.net/f/7485](https://nc.plainskill.net/f/7485 (preview))
+  - [https://gt.plainskill.net/plainskill/libreloom-branding/src/branch/main/logos/LibreLoom%20Logo%20%28Simplex%20Mono%29.svg](SVG)
+  - [https://gt.plainskill.net/plainskill/libreloom-branding/src/branch/main/logos/LibreLoom%20Logo%20%28Simplex%20Mono%29.png](PNG)
 - Textfree
-  - SVG: 
-
-    [https://nc.plainskill.net/f/7475](https://nc.plainskill.net/f/7475 (preview))
-  - PNG: 
-
-    [https://nc.plainskill.net/f/7486](https://nc.plainskill.net/f/7486 (preview))
+  - [https://gt.plainskill.net/plainskill/libreloom-branding/src/branch/main/logos/LibreLoom%20Logo%20%28Simplex%20Mono%2C%20textfree%29.svg](SVG)
+  - [https://gt.plainskill.net/plainskill/libreloom-branding/src/branch/main/logos/LibreLoom%20Logo%20%28Simplex%20Mono%2C%20textfree%29.png](PNG)
