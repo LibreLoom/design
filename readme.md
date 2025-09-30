@@ -1,4 +1,4 @@
-# Our Company's Logo and Other Related Things
+# LibreLoom's Logo and Other Related Things
 
 **Refer to this page for our style and branding guidelines.**
 
