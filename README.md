@@ -19,7 +19,7 @@ Simplex Mono design guidelines:
   - Flat design with lots of padding (enough to look not compressed but also doesn't feel big.)
   - Minimal visual effects & shadows (like, really, really minimal, preferably zero).
   - Circle/pill/fully-rounded-rectangle UI elements. Larger elements may be rounded rectangles.
-  - Navigation/toolbars float, and go on the *bottom*. They are collapsible to circular hamburger menu buttons on mobile.
+  - Navigation/toolbars float, and go on the *bottom*. They are collapsible to circular hamburger menu buttons, and can then be dragged (like the selfie view in Apple's dual camera recording) to any corner of the screen.
   - Sections in nav/toolbars are seperated with "|"-like shapes. The divider uses the accent color and almost spans the navbar's full height.
   - Nice, fluid animations. Take inspiration from Apple's Liquid Glass on this one.
 - Customization:
