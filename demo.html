@@ -1,0 +1,770 @@
+<!-- Created by Claude Sonnet 4.5 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplex Mono Design Language Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #FFFFFF;
+            --secondary: #000000;
+            --accent: #767676;
+            --dark-primary: #000000;
+            --dark-secondary: #FFFFFF;
+            --dark-accent: #767676;
+            --use-different-dark: false;
+        }
+
+        body {
+            font-family: 'Noto Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--primary);
+            color: var(--secondary);
+            transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 100vh;
+            padding: 40px 20px 120px;
+        }
+
+        body.dark-mode {
+            background-color: var(--dark-primary);
+            color: var(--dark-secondary);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Courier New', 'FreeMono', monospace;
+            font-weight: normal;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 48px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 32px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: var(--primary);
+            border: 2px solid var(--secondary);
+            border-radius: 24px;
+            padding: 32px;
+            margin-bottom: 32px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body.dark-mode .card {
+            background-color: var(--dark-primary);
+            border-color: var(--dark-secondary);
+        }
+
+        .button {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: none;
+            border-radius: 50px;
+            padding: 16px 32px;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+            margin: 8px 8px 8px 0;
+        }
+
+        body.dark-mode .button {
+            background-color: var(--dark-secondary);
+            color: var(--dark-primary);
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:active {
+            transform: scale(0.98);
+        }
+
+        .button-outline {
+            background-color: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        body.dark-mode .button-outline {
+            color: var(--dark-secondary);
+            border-color: var(--dark-secondary);
+        }
+
+        .button-outline:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        body.dark-mode .button-outline:hover {
+            background-color: var(--dark-secondary);
+            color: var(--dark-primary);
+        }
+
+        .input-group {
+            margin-bottom: 24px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="color"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 16px 24px;
+            border: 2px solid var(--secondary);
+            border-radius: 50px;
+            background-color: var(--primary);
+            color: var(--secondary);
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body.dark-mode input[type="text"],
+        body.dark-mode input[type="email"],
+        body.dark-mode input[type="color"],
+        body.dark-mode textarea,
+        body.dark-mode select {
+            border-color: var(--dark-secondary);
+            background-color: var(--dark-primary);
+            color: var(--dark-secondary);
+        }
+
+        textarea {
+            border-radius: 24px;
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(118, 118, 118, 0.1);
+        }
+
+        input[type="color"] {
+            height: 60px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            cursor: pointer;
+        }
+
+        .checkbox-wrapper input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        .navbar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--secondary);
+            color: var(--primary);
+            border-radius: 50px;
+            padding: 16px 32px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+        }
+
+        body.dark-mode .navbar {
+            background-color: var(--dark-secondary);
+            color: var(--dark-primary);
+        }
+
+        .navbar.collapsed {
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            border-radius: 50%;
+            gap: 0;
+            justify-content: center;
+        }
+
+        .navbar.collapsed .nav-items {
+            display: none;
+        }
+
+        .navbar.top-left {
+            bottom: auto;
+            top: 20px;
+            left: 20px;
+            transform: none;
+        }
+
+        .navbar.top-right {
+            bottom: auto;
+            top: 20px;
+            left: auto;
+            right: 20px;
+            transform: none;
+        }
+
+        .navbar.bottom-left {
+            left: 20px;
+            transform: none;
+        }
+
+        .navbar.bottom-right {
+            left: auto;
+            right: 20px;
+            transform: none;
+        }
+
+        .hamburger {
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: none;
+        }
+
+        .navbar.collapsed .hamburger {
+            display: block;
+        }
+
+        .nav-items {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-item {
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap;
+        }
+
+        .nav-item:hover {
+            opacity: 0.7;
+            transform: translateY(-2px);
+        }
+
+        .nav-divider {
+            width: 2px;
+            height: 32px;
+            background-color: var(--accent);
+            transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: inherit;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(180deg) scale(1.2);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .color-swatch {
+            padding: 24px;
+            border-radius: 16px;
+            text-align: center;
+            border: 2px solid var(--secondary);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body.dark-mode .color-swatch {
+            border-color: var(--dark-secondary);
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-4px);
+        }
+
+        @media (max-width: 768px) {
+            .navbar:not(.collapsed) {
+                display: none;
+            }
+
+            .navbar.collapsed {
+                display: flex;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .card {
+                padding: 24px;
+            }
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .settings-panel {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary);
+            border: 2px solid var(--secondary);
+            border-radius: 24px;
+            padding: 24px;
+            max-width: 320px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+        }
+
+        body.dark-mode .settings-panel {
+            background-color: var(--dark-primary);
+            border-color: var(--dark-secondary);
+        }
+
+        .settings-panel.hidden {
+            transform: translateX(400px);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .settings-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1001;
+        }
+
+        body.dark-mode .settings-toggle {
+            background-color: var(--dark-secondary);
+            color: var(--dark-primary);
+        }
+
+        .settings-toggle:hover {
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        .settings-toggle.panel-open {
+            transform: translateX(-340px);
+        }
+    </style>
+</head>
+<body>
+    <button class="settings-toggle" onclick="toggleSettings()">⚙️</button>
+    
+    <div class="settings-panel hidden" id="settingsPanel">
+        <h3>Customization</h3>
+        
+        <div class="input-group">
+            <label>Primary Color</label>
+            <input type="color" id="primaryColor" value="#FFFFFF">
+        </div>
+
+        <div class="input-group">
+            <label>Secondary Color</label>
+            <input type="color" id="secondaryColor" value="#000000">
+        </div>
+
+        <div class="input-group">
+            <label>Accent Color</label>
+            <input type="color" id="accentColor" value="#767676">
+        </div>
+
+        <div class="checkbox-wrapper">
+            <input type="checkbox" id="useDifferentDark" onchange="toggleDifferentDarkMode()">
+            <label for="useDifferentDark">Use different colors for dark mode</label>
+        </div>
+
+        <div id="darkModeColors" style="display: none;">
+            <div class="input-group">
+                <label>Dark Mode Primary</label>
+                <input type="color" id="darkPrimaryColor" value="#000000">
+            </div>
+
+            <div class="input-group">
+                <label>Dark Mode Secondary</label>
+                <input type="color" id="darkSecondaryColor" value="#FFFFFF">
+            </div>
+
+            <div class="input-group">
+                <label>Dark Mode Accent</label>
+                <input type="color" id="darkAccentColor" value="#767676">
+            </div>
+        </div>
+
+        <button class="button" onclick="applyCustomColors()">Apply Colors</button>
+        <button class="button-outline" onclick="resetColors()">Reset</button>
+    </div>
+
+    <div class="container">
+        <h1>Simplex Mono Design Language</h1>
+        <p>A minimal, monospace-inspired design system with <em>fluid</em> animations and <em>flexible</em> customization.</p>
+
+        <div class="card">
+            <h2>Typography</h2>
+            <p>Headings use a <strong>monospace font</strong> like Courier New or FreeMono, giving a technical, precise feel to the hierarchy.</p>
+            <h3>This is a Subheading</h3>
+            <p>Body text uses Noto Sans, a clean sans-serif font that provides excellent readability. Use <em>italics</em> for short emphasis and <strong>bold for entire line emphasis.</strong></p>
+        </div>
+
+        <div class="card">
+            <h2>Color System</h2>
+            <p>The default palette is simple: white, black, and grey. Light and dark modes swap primary and secondary colors seamlessly.</p>
+            <div class="color-grid">
+                <div class="color-swatch" style="background-color: #FFFFFF; color: #000000; border-color: #000000;">
+                    <strong>Primary</strong><br>#FFFFFF
+                </div>
+                <div class="color-swatch" style="background-color: #000000; color: #FFFFFF;">
+                    <strong>Secondary</strong><br>#000000
+                </div>
+                <div class="color-swatch" style="background-color: #767676; color: #FFFFFF;">
+                    <strong>Accent</strong><br>#767676
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Buttons & Interactions</h2>
+            <p>Buttons feature rounded pill shapes with smooth hover and press animations.</p>
+            <button class="button">Primary Button</button>
+            <button class="button-outline">Outline Button</button>
+        </div>
+
+        <div class="card">
+            <h2>Form Elements</h2>
+            <div class="input-group">
+                <label>Text Input</label>
+                <input type="text" placeholder="Enter your name...">
+            </div>
+            <div class="input-group">
+                <label>Email Input</label>
+                <input type="email" placeholder="your@email.com">
+            </div>
+            <div class="input-group">
+                <label>Text Area</label>
+                <textarea placeholder="Write something..."></textarea>
+            </div>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="demo-checkbox">
+                <label for="demo-checkbox">I agree to the terms</label>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Design Principles</h2>
+            <p><strong>Flat design with generous padding creates breathing room without feeling oversized.</strong></p>
+            <p><strong>No shadows or visual effects keep the interface clean and distraction-free.</strong></p>
+            <p><strong>Fully rounded elements (pills, circles) give a modern, friendly appearance.</strong></p>
+            <p>The floating navigation bar at the bottom provides easy access to key functions and collapses to a draggable hamburger menu on smaller screens.</p>
+        </div>
+
+        <div class="card">
+            <h2>Component Grid</h2>
+            <div class="demo-grid">
+                <div class="card" style="margin: 0;">
+                    <h3 style="margin-top: 0;">Card 1</h3>
+                    <p>Rounded cards with borders.</p>
+                </div>
+                <div class="card" style="margin: 0;">
+                    <h3 style="margin-top: 0;">Card 2</h3>
+                    <p>Consistent spacing throughout.</p>
+                </div>
+                <div class="card" style="margin: 0;">
+                    <h3 style="margin-top: 0;">Card 3</h3>
+                    <p>Adapts to light and dark modes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="hamburger" onclick="toggleNav()">☰</div>
+        <div class="nav-items">
+            <span class="nav-item" onclick="scrollToTop()">Home</span>
+            <div class="nav-divider"></div>
+            <span class="nav-item">About</span>
+            <div class="nav-divider"></div>
+            <span class="nav-item">Portfolio</span>
+            <div class="nav-divider"></div>
+            <span class="nav-item">Contact</span>
+            <div class="nav-divider"></div>
+            <button class="theme-toggle" onclick="toggleTheme()">◐</button>
+        </div>
+    </nav>
+
+    <script>
+        let isDarkMode = false;
+        let isNavCollapsed = false;
+        let navPosition = 'bottom-center';
+        let settingsPanelOpen = false;
+
+        function toggleTheme() {
+            isDarkMode = !isDarkMode;
+            document.body.classList.toggle('dark-mode');
+        }
+
+        function toggleNav() {
+            const navbar = document.getElementById('navbar');
+            isNavCollapsed = !isNavCollapsed;
+            
+            if (isNavCollapsed) {
+                navbar.classList.add('collapsed');
+                enableDragging();
+            } else {
+                navbar.classList.remove('collapsed');
+                disableDragging();
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Dragging functionality for collapsed navbar
+        let isDragging = false;
+        let currentX;
+        let currentY;
+        let initialX;
+        let initialY;
+        let xOffset = 0;
+        let yOffset = 0;
+
+        function enableDragging() {
+            const navbar = document.getElementById('navbar');
+            navbar.addEventListener('mousedown', dragStart);
+            navbar.addEventListener('touchstart', dragStart);
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('touchmove', drag);
+            document.addEventListener('mouseup', dragEnd);
+            document.addEventListener('touchend', dragEnd);
+        }
+
+        function disableDragging() {
+            const navbar = document.getElementById('navbar');
+            navbar.removeEventListener('mousedown', dragStart);
+            navbar.removeEventListener('touchstart', dragStart);
+        }
+
+        function dragStart(e) {
+            if (!isNavCollapsed) return;
+            
+            if (e.type === 'touchstart') {
+                initialX = e.touches[0].clientX - xOffset;
+                initialY = e.touches[0].clientY - yOffset;
+            } else {
+                initialX = e.clientX - xOffset;
+                initialY = e.clientY - yOffset;
+            }
+
+            isDragging = true;
+        }
+
+        function drag(e) {
+            if (!isDragging) return;
+
+            e.preventDefault();
+
+            const navbar = document.getElementById('navbar');
+
+            if (e.type === 'touchmove') {
+                currentX = e.touches[0].clientX - initialX;
+                currentY = e.touches[0].clientY - initialY;
+            } else {
+                currentX = e.clientX - initialX;
+                currentY = e.clientY - initialY;
+            }
+
+            xOffset = currentX;
+            yOffset = currentY;
+
+            navbar.style.transform = `translate(${currentX}px, ${currentY}px)`;
+        }
+
+        function dragEnd(e) {
+            if (!isDragging) return;
+
+            const navbar = document.getElementById('navbar');
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            
+            // Snap to nearest corner
+            const rect = navbar.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+
+            navbar.classList.remove('top-left', 'top-right', 'bottom-left', 'bottom-right');
+            navbar.style.transform = '';
+            
+            if (centerX < windowWidth / 2 && centerY < windowHeight / 2) {
+                navbar.classList.add('top-left');
+            } else if (centerX >= windowWidth / 2 && centerY < windowHeight / 2) {
+                navbar.classList.add('top-right');
+            } else if (centerX < windowWidth / 2 && centerY >= windowHeight / 2) {
+                navbar.classList.add('bottom-left');
+            } else {
+                navbar.classList.add('bottom-right');
+            }
+
+            xOffset = 0;
+            yOffset = 0;
+            isDragging = false;
+        }
+
+        // Check screen size on load and resize
+        function checkScreenSize() {
+            if (window.innerWidth <= 768 && !isNavCollapsed) {
+                toggleNav();
+            }
+        }
+
+        window.addEventListener('resize', checkScreenSize);
+        window.addEventListener('load', checkScreenSize);
+
+        // Settings panel functions
+        function toggleSettings() {
+            const panel = document.getElementById('settingsPanel');
+            const toggle = document.querySelector('.settings-toggle');
+            settingsPanelOpen = !settingsPanelOpen;
+            
+            if (settingsPanelOpen) {
+                panel.classList.remove('hidden');
+                toggle.classList.add('panel-open');
+            } else {
+                panel.classList.add('hidden');
+                toggle.classList.remove('panel-open');
+            }
+        }
+
+        function toggleDifferentDarkMode() {
+            const checkbox = document.getElementById('useDifferentDark');
+            const darkModeColors = document.getElementById('darkModeColors');
+            
+            if (checkbox.checked) {
+                darkModeColors.style.display = 'block';
+            } else {
+                darkModeColors.style.display = 'none';
+            }
+        }
+
+        function applyCustomColors() {
+            const primary = document.getElementById('primaryColor').value;
+            const secondary = document.getElementById('secondaryColor').value;
+            const accent = document.getElementById('accentColor').value;
+            const useDifferent = document.getElementById('useDifferentDark').checked;
+
+            document.documentElement.style.setProperty('--primary', primary);
+            document.documentElement.style.setProperty('--secondary', secondary);
+            document.documentElement.style.setProperty('--accent', accent);
+
+            if (useDifferent) {
+                const darkPrimary = document.getElementById('darkPrimaryColor').value;
+                const darkSecondary = document.getElementById('darkSecondaryColor').value;
+                const darkAccent = document.getElementById('darkAccentColor').value;
+
+                document.documentElement.style.setProperty('--dark-primary', darkPrimary);
+                document.documentElement.style.setProperty('--dark-secondary', darkSecondary);
+                document.documentElement.style.setProperty('--dark-accent', darkAccent);
+            } else {
+                document.documentElement.style.setProperty('--dark-primary', secondary);
+                document.documentElement.style.setProperty('--dark-secondary', primary);
+                document.documentElement.style.setProperty('--dark-accent', accent);
+            }
+        }
+
+        function resetColors() {
+            document.getElementById('primaryColor').value = '#FFFFFF';
+            document.getElementById('secondaryColor').value = '#000000';
+            document.getElementById('accentColor').value = '#767676';
+            document.getElementById('darkPrimaryColor').value = '#000000';
+            document.getElementById('darkSecondaryColor').value = '#FFFFFF';
+            document.getElementById('darkAccentColor').value = '#767676';
+            document.getElementById('useDifferentDark').checked = false;
+            toggleDifferentDarkMode();
+            applyCustomColors();
+        }
+    </script>
+</body>
+</html>
