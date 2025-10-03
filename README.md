@@ -22,6 +22,7 @@ Simplex Mono design guidelines:
   - Navigation/toolbars float, and go on the *bottom*. They collapse to circular hamburger menu buttons on small screens, and can then be dragged/flinged (like the selfie view in Apple's dual camera recording) to any corner of the screen.
   - Sections in nav/toolbars are separated with "|"-like shapes. The divider uses the accent color and almost spans the navbar's full height.
   - Nice, fluid animations. Take inspiration from Google's Material Expressive V3 for this.
+  - Well-tuned, noticeable haptics on supported platforms (e.g., Android, iOS, Linux Mobile, web if you can make it work *well*). A toggle must be available to enable or disable haptics. Offering intensity control is optional but recommended.
 - Customization:
   - The primary, secondary, and accent must be able to be set by the user.
   - There must be a "use different color palette for dark mode" option.
