@@ -35,3 +35,9 @@ Simplex Mono design guidelines:
 - Textfree
   - [SVG](https://gt.plainskill.net/plainskill/libreloom-branding/src/branch/main/logos/LibreLoom%20Logo%20%28Simplex%20Mono%2C%20textfree%29.svg)
   - [PNG](https://gt.plainskill.net/plainskill/libreloom-branding/src/branch/main/logos/LibreLoom%20Logo%20%28Simplex%20Mono%2C%20textfree%29.png)
+
+### We will have unobtrusive but compelling donation requests.
+
+- When building a LibreLoom product, you should put monetary contribution prompts in places where the users of the product are likely to *want* to purposefully click the link and proceed to donate. (e.g. after the user has confirmet that they had a good experience with the product, etc.)
+  - DO NOT DECEIVE USERS OR HARM THE UX TO ACHIEVE THIS!!!
+  - Ko-fi link: [https://ko-fi.com/libreloom](https://ko-fi.com/libreloom)
