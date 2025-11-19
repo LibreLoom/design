@@ -38,6 +38,6 @@ Simplex Mono design guidelines:
 
 ### We will have unobtrusive but compelling donation requests.
 
-- When building a LibreLoom product, you should put monetary contribution prompts in places where the users of the product are likely to *want* to purposefully click the link and proceed to donate. (e.g. after the user has confirmet that they had a good experience with the product, etc.)
+- When building a LibreLoom product, you should put monetary contribution prompts in places where the users of the product are likely to *want* to purposefully click the link and proceed to donate. (e.g. after the user has confirmed that they had a good experience with the product, etc.)
   - DO NOT DECEIVE USERS OR HARM THE UX TO ACHIEVE THIS!!!
   - Ko-fi link: [https://ko-fi.com/libreloom](https://ko-fi.com/libreloom)
