@@ -29,12 +29,22 @@ Simplex Mono design guidelines:
 
 ### Logos:
 
+The LibreLoom mark is 37 warp threads drawn together by one weft: from afar it reads as a single shape, up close it's many threads. For everyone, by everyone.
+
 - Main Logo
-  - [SVG](https://gt.plainskill.net/plainskill/libreloom-branding/src/branch/main/logos/LibreLoom%20Logo%20%28Simplex%20Mono%29.svg)
-  - [PNG](https://gt.plainskill.net/plainskill/libreloom-branding/src/branch/main/logos/LibreLoom%20Logo%20%28Simplex%20Mono%29.png)
+  - [SVG](logos/LibreLoom/LibreLoom%20Logo.svg)
+  - [PNG](logos/LibreLoom/LibreLoom%20Logo.png)
 - Textfree
-  - [SVG](https://gt.plainskill.net/plainskill/libreloom-branding/src/branch/main/logos/LibreLoom%20Logo%20%28Simplex%20Mono%2C%20textfree%29.svg)
-  - [PNG](https://gt.plainskill.net/plainskill/libreloom-branding/src/branch/main/logos/LibreLoom%20Logo%20%28Simplex%20Mono%2C%20textfree%29.png)
+  - [SVG](logos/LibreLoom/LibreLoom%20Logo%20%28textfree%29.svg)
+  - [PNG](logos/LibreLoom/LibreLoom%20Logo%20%28textfree%29.png)
+- Icon (card; use for favicons, app icons and avatars)
+  - [SVG](logos/LibreLoom/LibreLoom%20Logo%20%28icon%29.svg)
+  - [PNG](logos/LibreLoom/LibreLoom%20Logo%20%28icon%29.png)
+- LibreServ
+  - [SVG](logos/LibreServ/LibreServ%20Logo.svg)
+  - [Textfree SVG](logos/LibreServ/LibreServ%20Logo%20%28textfree%29.svg)
+
+Retired logos live in [`archive/`](archive/). Don't use them in new work.
 
 ### We will have unobtrusive but compelling donation requests.
 
