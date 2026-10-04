@@ -43,6 +43,12 @@ The LibreLoom mark is 37 warp threads drawn together by one weft: from afar it r
 - LibreServ
   - [SVG](logos/LibreServ/LibreServ%20Logo.svg)
   - [Textfree SVG](logos/LibreServ/LibreServ%20Logo%20%28textfree%29.svg)
+- Sol (draft)
+  - [SVG](logos/Sol/Sol%20Logo.svg)
+  - [Textfree SVG](logos/Sol/Sol%20Logo%20%28textfree%29.svg)
+- Luna (draft)
+  - [SVG](logos/Luna/Luna%20Logo.svg)
+  - [Textfree SVG](logos/Luna/Luna%20Logo%20%28textfree%29.svg)
 
 Retired logos live in [`archive/`](archive/). Don't use them in new work.
 
