@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" fill="none">
+  <!-- F2 as a ring: the inner threads are removed, leaving a hollow centre -->
+  <g stroke="#000000" stroke-width="1.1" stroke-linecap="round">
+    <ellipse cx="120" cy="122.00" rx="96.00" ry="96.00"/>
+    <ellipse cx="120" cy="121.05" rx="94.27" ry="94.27"/>
+    <ellipse cx="120" cy="120.09" rx="92.53" ry="92.53"/>
+    <ellipse cx="120" cy="119.14" rx="90.80" ry="90.80"/>
+    <ellipse cx="120" cy="118.19" rx="89.07" ry="89.07"/>
+    <ellipse cx="120" cy="117.23" rx="87.33" ry="87.33"/>
+    <ellipse cx="120" cy="116.28" rx="85.60" ry="85.60"/>
+    <ellipse cx="120" cy="115.33" rx="83.87" ry="83.87"/>
+    <ellipse cx="120" cy="114.37" rx="82.13" ry="82.13"/>
+    <ellipse cx="120" cy="113.42" rx="80.40" ry="80.40"/>
+    <ellipse cx="120" cy="112.47" rx="78.67" ry="78.67"/>
+    <ellipse cx="120" cy="111.51" rx="76.93" ry="76.93"/>
+    <ellipse cx="120" cy="110.56" rx="75.20" ry="75.20"/>
+    <ellipse cx="120" cy="109.61" rx="73.47" ry="73.47"/>
+    <ellipse cx="120" cy="108.65" rx="71.73" ry="71.73"/>
+    <ellipse cx="120" cy="107.70" rx="70.00" ry="70.00"/>
+    <ellipse cx="120" cy="106.75" rx="68.27" ry="68.27"/>
+    <ellipse cx="120" cy="105.79" rx="66.53" ry="66.53"/>
+    <ellipse cx="120" cy="104.84" rx="64.80" ry="64.80"/>
+    <ellipse cx="120" cy="103.89" rx="63.07" ry="63.07"/>
+    <ellipse cx="120" cy="102.93" rx="61.33" ry="61.33"/>
+    <ellipse cx="120" cy="101.98" rx="59.60" ry="59.60"/>
+    <ellipse cx="120" cy="101.03" rx="57.87" ry="57.87"/>
+    <ellipse cx="120" cy="100.07" rx="56.13" ry="56.13"/>
+    <ellipse cx="120" cy="99.12" rx="54.40" ry="54.40"/>
+    <ellipse cx="120" cy="98.17" rx="52.67" ry="52.67"/>
+    <ellipse cx="120" cy="97.21" rx="50.93" ry="50.93"/>
+    <ellipse cx="120" cy="96.26" rx="49.20" ry="49.20"/>
+    <ellipse cx="120" cy="95.31" rx="47.47" ry="47.47"/>
+    <ellipse cx="120" cy="94.35" rx="45.73" ry="45.73"/>
+    <ellipse cx="120" cy="93.40" rx="44.00" ry="44.00"/>
+    <ellipse cx="120" cy="92.45" rx="42.27" ry="42.27"/>
+    <ellipse cx="120" cy="91.49" rx="40.53" ry="40.53"/>
+    <ellipse cx="120" cy="90.54" rx="38.80" ry="38.80"/>
+    <ellipse cx="120" cy="89.59" rx="37.07" ry="37.07"/>
+    <ellipse cx="120" cy="88.63" rx="35.33" ry="35.33"/>
+    <ellipse cx="120" cy="87.68" rx="33.60" ry="33.60"/>
+  </g>
+</svg>
