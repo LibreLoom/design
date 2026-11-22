@@ -2,4 +2,5 @@
 
 Retired logos and icons, kept for reference. Don't use these in new work; current logos are in [`logos/`](../logos/).
 
-- `logos/LibreLoom/LibreLoom Logo (Simplex Mono…)`: the original loom-and-circuit mark, retired 2026-10-02 in favour of the 37-thread mark. The `favicon-optimized` PNG was the LibreLoom Website favicon.
+- `logos/LibreLoom/LibreLoom Logo (37-thread…)`: the 37-thread mark, adopted 2026-10-02 and retired 2026-11-22 after poor reception. The original loom-and-circuit mark is current again.
+- `logos/LibreLoom/Drafts/`: concept art for the retired 37-thread mark.

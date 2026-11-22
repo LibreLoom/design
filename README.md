@@ -29,7 +29,7 @@ Simplex Mono design guidelines:
 
 ### Logos:
 
-The LibreLoom mark is 37 warp threads drawn together by one weft: from afar it reads as a single shape, up close it's many threads. For everyone, by everyone.
+The LibreLoom mark is the original loom-and-circuit emblem: a loom whose threads become circuitry. For everyone, by everyone.
 
 - Main Logo
   - [SVG](logos/LibreLoom/LibreLoom%20Logo.svg)
@@ -37,9 +37,9 @@ The LibreLoom mark is 37 warp threads drawn together by one weft: from afar it r
 - Textfree
   - [SVG](logos/LibreLoom/LibreLoom%20Logo%20%28textfree%29.svg)
   - [PNG](logos/LibreLoom/LibreLoom%20Logo%20%28textfree%29.png)
-- Icon (card; use for favicons, app icons and avatars)
-  - [SVG](logos/LibreLoom/LibreLoom%20Logo%20%28icon%29.svg)
+- Icon (use for favicons, app icons and avatars)
   - [PNG](logos/LibreLoom/LibreLoom%20Logo%20%28icon%29.png)
+  - [Scalable artwork (textfree SVG)](logos/LibreLoom/LibreLoom%20Logo%20%28textfree%29.svg)
 - LibreServ
   - [SVG](logos/LibreServ/LibreServ%20Logo.svg)
   - [Textfree SVG](logos/LibreServ/LibreServ%20Logo%20%28textfree%29.svg)
@@ -50,7 +50,7 @@ The LibreLoom mark is 37 warp threads drawn together by one weft: from afar it r
   - [SVG](logos/LibreServ/Luna/Luna%20Logo.svg)
   - [Textfree SVG](logos/LibreServ/Luna/Luna%20Logo%20%28textfree%29.svg)
 
-Retired logos live in [`archive/`](archive/). Don't use them in new work.
+The original loom-and-circuit mark was reinstated as the current logo on 2026-11-22. The retired 37-thread mark and its concept drafts live in [`archive/`](archive/). Don't use them in new work.
 
 ### We will have unobtrusive but compelling donation requests.
 
